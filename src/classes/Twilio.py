@@ -15,10 +15,9 @@ class Twilio:
 
   def create_message(self, payload):
     try:
-      print("Attempting to send message: ", payload)
       self.client.messages.create(body=payload, from_=self.from_, to=self.to)
-      print('Message sent.')
+      print('Twilio Message successfully sent.')
     except:
-      print("Unexpected error during attempt to send text message:", sys.exec_info()[0])
+      print("Unexpected error occurred.")
 
 

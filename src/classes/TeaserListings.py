@@ -16,24 +16,19 @@ class TeaserListings:
     for teaser in self.teasers:
       self.teaserInstances.append( TeaserInstance(teaser) )
 
-  def list(self, limit = 15):
+  def list(self, wordLimit = 16):
     result = ''
-    total = len(self.teaserInstances)
-
-    result += str(total) + ' OzBargain deals today: '
-    result += '\n'
-    result += '\n'
 
     for teaser in self.teaserInstances:
       if teaser.title and teaser.link:
-        result += " ".join(teaser.title.split()[:limit])
+        result += " ".join(teaser.title.split()[:wordLimit])
         result += '\n'
         result += self.urlShortener.tinyurl.short(teaser.link)
         result += '\n'
         result += '\n'
 
-    if (self.character_limit_exceeded(result)):
-      return self.list(limit - 1)
+    if self.character_limit_exceeded(result):
+      return self.list(wordLimit - 1)
     else:
       return result
 

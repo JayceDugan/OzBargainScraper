@@ -1,4 +1,4 @@
-from src.classes.OzBargain import OzBargain
+from src.classes.Scheduler import Scheduler
 
-ozBargainInstance = OzBargain()
-ozBargainInstance.list_deals()
+schedule = Scheduler()
+schedule.start()
