@@ -20,6 +20,7 @@ class OzBargain:
 
     self.build_teaser_listings()
     self.list_deals = self.listings.list
+    self.print_deals = self.listings.print
 
   def make_request(self):
     return requests.get(self.domain)
