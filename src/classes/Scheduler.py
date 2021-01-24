@@ -11,7 +11,7 @@ class Scheduler:
     print('Scheduler Initialized.')
 
   def start(self):
-    schedule.every().minute.at(':10').do(self.run)
+    schedule.every().day.at('11:30').do(self.run)
     print('Scheduler Started.')
 
     while True:
