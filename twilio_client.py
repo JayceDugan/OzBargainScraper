@@ -1,19 +1,18 @@
 import config
-import twilio.rest
+from twilio.rest import Client
 
 class TwilioClient:
-  def __init__(self):
-    self.twilio_module = twilio.rest.Client(config.twilio_auth_token, config.twilio_sid)
-
   def notify(self, payload):
     return self.create_message(payload)
 
   def create_message(self, payload):
     try:
-      self.twilio_module.messages.create(
-        to=config.twilio_to,
-        from_=config.twilio_from,
+      client = Client(config.twilio_auth_token, config.twilio_sid)
+
+      client.messages.create(
         body=payload,
+        from_=config.twilio_from,
+        to=config.twilio_to
       )
 
       print('Twilio notification sent.')
