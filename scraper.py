@@ -1,13 +1,12 @@
+import bs4
 import requests
-from bs4 import BeautifulSoup
+import config
+import deals
 
-from ..lib.config import ozBargainDomain
-from .TeaserListings import TeaserListings
-
-class OzBargain:
+class Scraper:
   def __init__(self):
-    self.domain = ozBargainDomain
-    self.request= []
+    self.domain = config.oz_bargain_domain
+    self.request = []
     self.soup = []
     self.deals = []
     self.listings = []
@@ -20,13 +19,13 @@ class OzBargain:
 
     self.build_teaser_listings()
     self.list_deals = self.listings.list
-    self.print_deals = self.listings.print
+
 
   def make_request(self):
     return requests.get(self.domain)
 
   def make_soup(self):
-    return BeautifulSoup(self.request.text, 'html.parser')
+    return bs4.BeautifulSoup(self.request.text, 'html.parser')
 
   def get_deals(self):
     return self.soup.find_all('div', class_="node node-ozbdeal node-teaser")
@@ -36,6 +35,4 @@ class OzBargain:
 
   def build_teaser_listings(self):
     if self.deals_exist:
-      self.listings = TeaserListings(self.deals)
-
-
+      self.listings = deals.Deals(self.deals)
