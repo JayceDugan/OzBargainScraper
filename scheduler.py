@@ -9,6 +9,7 @@ class Scheduler:
     print('Scheduler Initialized.')
 
   def start(self):
+    self.run()
     schedule.every().hour.do(self.run)
     print('Scheduler Started.')
 
