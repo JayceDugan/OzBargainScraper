@@ -1,4 +1,3 @@
-import notifications
 import discord_channels
 
 class DiscordClient:
