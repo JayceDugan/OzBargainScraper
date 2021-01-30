@@ -5,7 +5,6 @@ import scraper
 
 class Scheduler:
   def __init__(self):
-    self.scraper = scraper.Scraper()
     self.discordClient = discord_client.DiscordClient()
     print('Scheduler Initialized.')
 

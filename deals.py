@@ -12,14 +12,14 @@ class Deals:
     for deal in self.deals:
       self.teaser_instances.append( oz_teaser.OzTeaser(deal) )
 
-  def list(self, word_limit = config.oz_teaser_title_word_limit):
+  def list(self):
     result = ['']
 
     for teaser in self.teaser_instances:
       teaser_is_valid = teaser.title and teaser.link
 
       if teaser_is_valid:
-        teaser_message = self.build_teaser_message(teaser, word_limit)
+        teaser_message = self.build_teaser_message(teaser)
         teaser_message_length = len(teaser_message)
         current_message_length = len(result[-1])
         potential_message_length = teaser_message_length + current_message_length
@@ -32,7 +32,7 @@ class Deals:
 
     return result
 
-  def build_teaser_message(self, teaser, word_limit):
+  def build_teaser_message(self, teaser):
     result = '\n'
     spacer = '\n'
 
