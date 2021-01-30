@@ -6,3 +6,6 @@ class DiscordClient:
 
   def update(self):
     return self.channels.update()
+
+  def update(self):
+    return self.channels.update()

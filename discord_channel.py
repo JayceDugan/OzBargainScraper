@@ -2,7 +2,6 @@ import requests
 import scraper
 import json
 from datetime import datetime, timedelta
-from pytz import timezone
 
 class Channel:
   def __init__(self, channel):
@@ -19,7 +18,7 @@ class Channel:
     channel_deals = self.scraper.get_formatted_deals()
 
     if len(channel_deals) > 0:
-      print(str(len(channel_deals)) + 'messages for: ' + str(self.oz_bargain_url) + 'channel.')
+      print(str(len(channel_deals)) + ' messages for: ' + str(self.oz_bargain_url) + 'channel. \n')
 
       for deal_message in channel_deals:
         self.message(deal_message)
