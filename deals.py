@@ -13,26 +13,30 @@ class Deals:
       self.teaser_instances.append( oz_teaser.OzTeaser(deal) )
 
   def list(self, word_limit = config.oz_teaser_title_word_limit):
-    result = ''
+    result = ['']
 
     for teaser in self.teaser_instances:
       teaser_is_valid = teaser.title and teaser.link
 
       if teaser_is_valid:
-        result += self.build_teaser_message(teaser, word_limit)
+        teaser_message = self.build_teaser_message(teaser, word_limit)
+        teaser_message_length = len(teaser_message)
+        current_message_length = len(result[-1])
+        potential_message_length = teaser_message_length + current_message_length
+        character_limit_exceeded = self.check_character_limit(potential_message_length)
 
-    character_limit_exceeded = self.check_character_limit(result)
+        if not character_limit_exceeded:
+          result[-1] += teaser_message
+        else:
+          result.append( teaser_message )
 
-    if character_limit_exceeded:
-      return self.list(word_limit - 1)
-    else:
-      return result
+    return result
 
   def build_teaser_message(self, teaser, word_limit):
-    result = ''
+    result = '\n'
     spacer = '\n'
 
-    result += " ".join(teaser.title.split()[:word_limit])
+    result += " ".join(teaser.title.split())
     result += spacer
     result += pyshorteners.Shortener().tinyurl.short(teaser.link)
     result += spacer
@@ -41,7 +45,7 @@ class Deals:
     return result
 
   def check_character_limit(self, payload):
-    return len(payload) > config.discord_character_limit
+    return payload > config.discord_character_limit
 
   def print(self):
     print(self.list())

@@ -1,17 +1,16 @@
 import schedule
 import time
-import discord
+import discord_client
 import scraper
 
 class Scheduler:
   def __init__(self):
     self.scraper = scraper.Scraper()
-    self.discordClient = discord.DiscordClient()
+    self.discordClient = discord_client.DiscordClient()
     print('Scheduler Initialized.')
 
   def start(self):
-    schedule.every().day.at('8:30').do(self.run)
-
+    schedule.every().hour.do(self.run)
     print('Scheduler Started.')
 
     while True:
@@ -19,8 +18,4 @@ class Scheduler:
        time.sleep(1)
 
   def run(self):
-    print('Scheduler run fired: ', self.currentTime())
-    self.discordClient.send_message(self.scraper.list_deals())
-
-  def currentTime(self):
-    return time.strftime("%H:%M:%S", time.localtime())
+    self.discordClient.update()

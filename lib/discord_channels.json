@@ -1,0 +1,127 @@
+[
+  {
+    "name": "Front Page Deals",
+    "oz-bargain-url": "https://www.ozbargain.com.au/",
+    "discord-webhook-url": "https://discord.com/api/webhooks/803480065061027860/Nn4gdvb7loLQzfTHfyk4VYvhqdAWYnrSl6-Jw5k2id27CqPmLCA-HZx7eKid42PDWkKn"
+  },
+  {
+    "name": "New Deals",
+    "oz-bargain-url": "https://www.ozbargain.com.au/deals",
+    "discord-webhook-url": "https://discord.com/api/webhooks/803480841102688276/CidpMGIAZRmmSkU4mDTqOKroN50Px6gqm80SsUeMOGRVFgmjaKydMNUAzbZw5XLguY1_"
+  },
+  {
+    "name": "Popular Deals",
+    "oz-bargain-url": "https://www.ozbargain.com.au/deals/popular",
+    "discord-webhook-url": "https://discord.com/api/webhooks/803480959801360444/we_9SvkdUPG7J21p0W661uU5ZpTvZilml981ZWizzH8z-eYNG2a21ExRYHPBnVALS0cL"
+  },
+  {
+    "name": "Freebies",
+    "oz-bargain-url": "https://www.ozbargain.com.au/freebies",
+    "discord-webhook-url": "https://discord.com/api/webhooks/803481104690184192/JAaEIIqL3DzgniqYYKMoXGIP2E50XWVtBs2FVLtB_AC-nveOAFxopYWOaqSwurVzPLK2"
+  },
+  {
+    "name": "Alcohol",
+    "oz-bargain-url": "https://www.ozbargain.com.au/cat/alcohol",
+    "discord-webhook-url": "https://discord.com/api/webhooks/803481414544654347/ajks7NzEMZw8kE-YYRofTZFusLO0syRU3wWbcgfWnAzunGZVBi_WF9VDoaLtpWkNzti-"
+  },
+  {
+    "name": "Automotive",
+    "oz-bargain-url": "https://www.ozbargain.com.au/cat/automotive",
+    "discord-webhook-url": "https://discord.com/api/webhooks/803481589354070027/vkJvqomAJZN9ksQOKjL6cXMbshif2R5Lly5afk7ydUGvzvdbTNus1Lp7LM41gTNO3jgB"
+  },
+  {
+    "name": "Books & Magazines",
+    "oz-bargain-url": "https://www.ozbargain.com.au/cat/books-magazines",
+    "discord-webhook-url": "https://discord.com/api/webhooks/803482014832525374/Xxa3xaveSNPiqSA12-b3MFdiUOqx0Yoo2nnqolUDaAqwXQ8QonfkbQ4BpsYjuScoNjPg"
+  },
+  {
+    "name": "Computing",
+    "oz-bargain-url": "https://www.ozbargain.com.au/cat/computing",
+    "discord-webhook-url": "https://discord.com/api/webhooks/803482184178204682/9kQScArzjXh0EV706JXDwdMAqlTAQRb0Qdf9x8ied6RHKBI5nP2IoHy_IcGrexjuAPHB"
+  },
+  {
+    "name": "Dining & Takeaway",
+    "oz-bargain-url": "https://www.ozbargain.com.au/cat/dining-takeaway",
+    "discord-webhook-url": "https://discord.com/api/webhooks/803482593990803497/Y4ODW_wm_3ODwVrbDqf3cX_bphFRUBh2cRLdoxsLTDAG0lgLZ05x3A4hDWKQtafPvM03"
+  },
+  {
+    "name": "Education",
+    "oz-bargain-url": "https://www.ozbargain.com.au/cat/education",
+    "discord-webhook-url": "https://discord.com/api/webhooks/803482547764854794/ILLw_B5nlQtgmtQDfhMMmXV4JDS_-Ro0JhOslABPCOb_3WcV0Ep2Wx9EsZEdP5n0TmG-"
+  },
+  {
+    "name": "Electrical & Electronics",
+    "oz-bargain-url": "https://www.ozbargain.com.au/cat/electrical-electronics",
+    "discord-webhook-url": "https://discord.com/api/webhooks/803482746445758474/oSnZLd-Mo8aweVG5OIYixyzfd-46TNIc6eTZEsbxyFsfu3gIVyb6OfXGm1s-jwIddPu5"
+  },
+  {
+    "name": "Entertainment",
+    "oz-bargain-url": "https://www.ozbargain.com.au/cat/entertainment",
+    "discord-webhook-url": "https://discord.com/api/webhooks/803482839735336980/ftrA6B_Py73mdyHwr_q_YwU6OltFS83HpZ0m2_3n2skda7pjjuFqB4Nvb36KtyeafpLR"
+  },
+  {
+    "name": "Fashion & Apparel",
+    "oz-bargain-url": "https://www.ozbargain.com.au/cat/fashion-apparel",
+    "discord-webhook-url": "https://discord.com/api/webhooks/803483031129030657/4vapQBGlZNy0yXIg08D0SCxGEemYY7mWcGPPWXIPXeZGk5OviGWAbWgtJNzRFNAfXH2d"
+  },
+  {
+    "name": "Financial",
+    "oz-bargain-url": "https://www.ozbargain.com.au/cat/financial",
+    "discord-webhook-url": "https://discord.com/api/webhooks/803483142862143509/m74Ry3-iZ7JgPD_yL5xZBolykxeNP0p-C-M-0atFrpDYlxQvDlCjskFp4IavajWBNqT8"
+  },
+  {
+    "name": "Gaming",
+    "oz-bargain-url": "https://www.ozbargain.com.au/cat/gaming",
+    "discord-webhook-url": "https://discord.com/api/webhooks/803483250119016518/POO8COe_wXgwrSPfPgNArFldwXXvN1n-BJ8zdWctuZVmjg5ac1xbk858Zzm18ojN0u3n"
+  },
+  {
+    "name": "Groceries",
+    "oz-bargain-url": "https://www.ozbargain.com.au/cat/groceries",
+    "discord-webhook-url": "https://discord.com/api/webhooks/803483319945265152/8vr-92w4dtvY2k1WUaKo06cADj9IQWqIHa-uHE5lDQTMnyAfoobHq0GsmYsI8DSsiNhm"
+  },
+  {
+    "name": "Health & Beauty",
+    "oz-bargain-url": "https://www.ozbargain.com.au/cat/health-beauty",
+    "discord-webhook-url": "https://discord.com/api/webhooks/803483801107955752/ITMMhGKg_4rAQXCGC0PoIzXETzgSSqDEFEGIsD3HqNCxyaGy8a7NiTsmrNUBskhiL77s"
+  },
+  {
+    "name": "Home & Garden",
+    "oz-bargain-url": "https://www.ozbargain.com.au/cat/home-garden",
+    "discord-webhook-url": "https://discord.com/api/webhooks/803483947174330369/tWd1fbPSplymgpkjIC3bS20Ba_GvDtfHsC5Qx5rkaLRSaSHaLzaas-uQoZ5Os28gLgyd"
+  },
+  {
+    "name": "Internet",
+    "oz-bargain-url": "https://www.ozbargain.com.au/cat/internet",
+    "discord-webhook-url": "https://discord.com/api/webhooks/803484143023292427/9d3Sxw-tjpoYs0NjFOKsUDENHFYgkaeJGhP4Bt3-IT2-OGIdc_nLfh5b7fb5aRyaGm4m"
+  },
+  {
+    "name": "Mobile",
+    "oz-bargain-url": "https://www.ozbargain.com.au/cat/mobile",
+    "discord-webhook-url": "https://discord.com/api/webhooks/803484251222835200/QQoSU1FTGvNPgabmRWYnkVaO_DTbV7Tj3N3j0MYHZAeo55nZe5CFINqLGHH6RGgmio94"
+  },
+  {
+    "name": "Pets",
+    "oz-bargain-url": "https://www.ozbargain.com.au/cat/pets",
+    "discord-webhook-url": "https://discord.com/api/webhooks/803485270381035571/btYZxOcoSuggFeHZxV16LmBxeFX-muuyDWtc8KZaGU3-muJhLDkEbl94xm5IgsMpUMIl"
+  },
+  {
+    "name": "Sports & Outdoors",
+    "oz-bargain-url": "https://www.ozbargain.com.au/cat/sports-outdoors",
+    "discord-webhook-url": "https://discord.com/api/webhooks/803485368632606770/Xw74I_SRgzrQNRFh5ZxZ5YcdCd8ltCM-FNLqI2jbZV2_MHpz_7dVfMRDA2-GQcnRvSY8"
+  },
+  {
+    "name": "Toys & Kids",
+    "oz-bargain-url": "https://www.ozbargain.com.au/cat/toys-kids",
+    "discord-webhook-url": "https://discord.com/api/webhooks/803504025826754580/z96pdQM0T7FarjScPA6-DFyW1W09V1WyR0OGuMEDyfOZecwRA59XrHfUO7zCzCRfydc2"
+  },
+  {
+    "name": "Travel",
+    "oz-bargain-url": "https://www.ozbargain.com.au/cat/travel",
+    "discord-webhook-url": "https://discord.com/api/webhooks/803503962337837137/mQCryJw4nwaCjSYuLwdK8A-L3blrJiZkInz0fZOrsYDg-5pvf9f-vnA1Rkf4-aIPqwRb"
+  },
+  {
+    "name": "Other",
+    "oz-bargain-url": "https://www.ozbargain.com.au/cat/other",
+    "discord-webhook-url": "https://discord.com/api/webhooks/803503898153058315/G-suRwQc50pXvAesDFrGKG7O-pYvq4suk-jJqv3UwdwN5vAlQA-99kMBSkQjUzpE-LlK"
+  }
+]
