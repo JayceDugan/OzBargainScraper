@@ -1,11 +1,4 @@
 import os
-
-### Twilio SMS Notification Service
-twilio_active = os.environ['TWILIO_NOTIFICATIONS_ACTIVE']
-twilio_auth_token = os.environ['TWILIO_AUTH_TOKEN']
-twilio_sid = os.environ['TWILIO_ACCOUNT_SID']
-twilio_from = os.environ['TWILIO_FROM']
-twilio_to = os.environ['TWILIO_TO']
 twilio_notification_message = 'Discord has been updated with the latest https://ozbargain.com.au deals.'
 
 ### OzBargain Configs
