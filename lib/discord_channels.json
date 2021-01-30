@@ -11,7 +11,7 @@
   },
   {
     "name": "Popular Deals",
-    "oz-bargain-url": "https://www.ozbargain.com.au/popular-deals",
+    "oz-bargain-url": "https://www.ozbargain.com.au/deals/popular",
     "discord-webhook-url": "https://discord.com/api/webhooks/803480959801360444/we_9SvkdUPG7J21p0W661uU5ZpTvZilml981ZWizzH8z-eYNG2a21ExRYHPBnVALS0cL"
   },
   {
@@ -21,7 +21,7 @@
   },
   {
     "name": "Alcohol",
-    "oz-bargain-url": "https://www.ozbargain.com.au/alcohol",
+    "oz-bargain-url": "https://www.ozbargain.com.au/cat/alcohol",
     "discord-webhook-url": "https://discord.com/api/webhooks/803481414544654347/ajks7NzEMZw8kE-YYRofTZFusLO0syRU3wWbcgfWnAzunGZVBi_WF9VDoaLtpWkNzti-"
   },
   {
@@ -61,7 +61,7 @@
   },
   {
     "name": "Fashion & Apparel",
-    "oz-bargain-url": "https://discord.com/api/webhooks/803482839735336980/ftrA6B_Py73mdyHwr_q_YwU6OltFS83HpZ0m2_3n2skda7pjjuFqB4Nvb36KtyeafpLR",
+    "oz-bargain-url": "https://www.ozbargain.com.au/cat/fashion-apparel",
     "discord-webhook-url": "https://discord.com/api/webhooks/803483031129030657/4vapQBGlZNy0yXIg08D0SCxGEemYY7mWcGPPWXIPXeZGk5OviGWAbWgtJNzRFNAfXH2d"
   },
   {
@@ -112,16 +112,16 @@
   {
     "name": "Toys & Kids",
     "oz-bargain-url": "https://www.ozbargain.com.au/cat/toys-kids",
-    "discord-webhook-url": ""
+    "discord-webhook-url": "https://discord.com/api/webhooks/803504025826754580/z96pdQM0T7FarjScPA6-DFyW1W09V1WyR0OGuMEDyfOZecwRA59XrHfUO7zCzCRfydc2"
   },
   {
     "name": "Travel",
-    "oz-bargain-url": "",
-    "discord-webhook-url": ""
+    "oz-bargain-url": "https://www.ozbargain.com.au/cat/travel",
+    "discord-webhook-url": "https://discord.com/api/webhooks/803503962337837137/mQCryJw4nwaCjSYuLwdK8A-L3blrJiZkInz0fZOrsYDg-5pvf9f-vnA1Rkf4-aIPqwRb"
   },
   {
     "name": "Other",
-    "oz-bargain-url": "",
-    "discord-webhook-url": ""
-  },
+    "oz-bargain-url": "https://www.ozbargain.com.au/cat/other",
+    "discord-webhook-url": "https://discord.com/api/webhooks/803503898153058315/G-suRwQc50pXvAesDFrGKG7O-pYvq4suk-jJqv3UwdwN5vAlQA-99kMBSkQjUzpE-LlK"
+  }
 ]
