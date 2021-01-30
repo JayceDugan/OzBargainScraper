@@ -21,7 +21,7 @@ class Channel:
       print(str(len(channel_deals)) + ' messages for: ' + str(self.oz_bargain_url) + 'channel. \n')
 
       for deal_message in channel_deals:
-        self.message(deal_message)
+        self.message(" - Current deals listed at: " + str(self.oz_bargain_url) + "\n" + deal_message)
     else:
       self.message('OzCrawler found no new details at this time.')
 
@@ -31,7 +31,7 @@ class Channel:
     time_format = '%d-%m-%Y %I:%M %p'
     timestamp = datetime.utcnow() + timedelta(hours=1)
     formatted_timestamp = timestamp.strftime(time_format)
-    next_update_message = 'Channel successfully updated, the next update will occur at: ' + formatted_timestamp
+    next_update_message = '- Channel Update Successful. \n \n New deals will be posted in an hour at approximately: ' + formatted_timestamp
 
     self.message(next_update_message)
 
@@ -39,6 +39,8 @@ class Channel:
     try:
       if not payload:
         payload = 'No new deals found for ' + self.oz_bargain_url
+
+      payload += '\n\n'
 
       headers = {'Content-Type': 'application/json'}
       content = json.dumps({"content": payload})

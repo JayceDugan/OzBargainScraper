@@ -28,7 +28,7 @@ class Deals:
         if not character_limit_exceeded:
           result[-1] += teaser_message
         else:
-          result.append( teaser_message )
+          result.append(teaser_message)
 
     return result
 
@@ -36,7 +36,7 @@ class Deals:
     result = '\n'
     spacer = '\n'
 
-    result += teaser.title + ' - ' + pyshorteners.Shortener().tinyurl.short(teaser.link)
+    result += teaser.title + ' - <' + pyshorteners.Shortener().tinyurl.short(teaser.link) + '>'
     result += spacer
 
     return result
