@@ -36,10 +36,7 @@ class Deals:
     result = '\n'
     spacer = '\n'
 
-    result += " ".join(teaser.title.split())
-    result += spacer
-    result += pyshorteners.Shortener().tinyurl.short(teaser.link)
-    result += spacer
+    result += teaser.title + ' - ' + pyshorteners.Shortener().tinyurl.short(teaser.link)
     result += spacer
 
     return result
