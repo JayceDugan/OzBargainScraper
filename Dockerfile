@@ -10,4 +10,4 @@ WORKDIR /usr/src
 
 COPY . .
 
-CMD ["python", "./main.py"]
+CMD ["python", "./oz_bargain_scraper.py"]
