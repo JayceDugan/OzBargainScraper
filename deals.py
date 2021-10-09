@@ -2,6 +2,7 @@ import pyshorteners
 import oz_teaser
 import config
 
+
 class Deals:
   def __init__(self, deals):
     self.deals = deals
@@ -13,24 +14,25 @@ class Deals:
       self.teaser_instances.append( oz_teaser.OzTeaser(deal) )
 
   def list(self):
-    result = ['']
+    result = []
 
     for teaser in self.teaser_instances:
       teaser_is_valid = teaser.title and teaser.link
 
       if teaser_is_valid:
-        teaser_message = self.build_teaser_message(teaser)
-        teaser_message_length = len(teaser_message)
-        current_message_length = len(result[-1])
-        potential_message_length = teaser_message_length + current_message_length
-        character_limit_exceeded = self.check_character_limit(potential_message_length)
-
-        if not character_limit_exceeded:
-          result[-1] += teaser_message
-        else:
-          result.append(teaser_message)
+        result.append(self.build_teaser_embed(teaser))
 
     return result
+
+  def build_teaser_embed(self, teaser):
+    return {
+      "title": teaser.title,
+      # "url": pyshorteners.Shortener().tinyurl.short(teaser.link),
+      "url": teaser.link,
+      "thumbnail": {
+        "url": teaser.thumbnail_src,
+      }
+    }
 
   def build_teaser_message(self, teaser):
     result = '\n'

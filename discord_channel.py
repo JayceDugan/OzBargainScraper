@@ -1,7 +1,11 @@
 import requests
 import scraper
+import time
 import json
 from datetime import datetime, timedelta
+
+def chunker(seq, size):
+  return (seq[pos:pos + size] for pos in range(0, len(seq), size))
 
 class Channel:
   def __init__(self, channel):
@@ -18,32 +22,37 @@ class Channel:
     channel_deals = self.scraper.get_formatted_deals()
 
     if len(channel_deals) > 0:
-      print(str(len(channel_deals)) + ' messages for: ' + str(self.oz_bargain_url) + 'channel. \n')
+      print(str(len(channel_deals)) + ' deals for: ' + str(self.oz_bargain_url) + 'channel. \n')
 
-      for deal_message in channel_deals:
-        self.message(" - Current deals listed at: " + str(self.oz_bargain_url) + "\n" + deal_message)
+      for group in chunker(channel_deals, 10):
+        self.message({
+          "color": "0x0099ff",
+          "embeds": group
+        })
+        time.sleep(2.5)
+
     else:
-      self.message('OzCrawler found no new details at this time.')
+      self.message({ "content": "No Deals Found." })
 
     self.send_next_update_interval_message()
 
   def send_next_update_interval_message(self):
-    time_format = '%d-%m-%Y %I:%M %p'
-    timestamp = datetime.utcnow() + timedelta(hours=1)
+    time_format = '%d %b %y at %I:%M%p'
+    timestamp = datetime.now() + timedelta(hours=1)
     formatted_timestamp = timestamp.strftime(time_format)
-    next_update_message = '- Channel Update Successful. \n \n New deals will be posted in an hour at approximately: ' + formatted_timestamp
+    next_update_message = '- Deals will be updated in 1 hour at approximately: ' + formatted_timestamp
 
-    self.message(next_update_message)
+    self.message({ "content": next_update_message })
 
-  def message(self, payload = ''):
+  def message(self, payload = {}):
     try:
       if not payload:
-        payload = 'No new deals found for ' + self.oz_bargain_url
-
-      payload += '\n\n'
+        payload = {
+          "content": 'No new deals found for ' + self.oz_bargain_url
+        }
 
       headers = {'Content-Type': 'application/json'}
-      content = json.dumps({"content": payload})
+      content = json.dumps(payload)
 
       return self.handle_message_request(requests.post(self.webhook_url, data=content, headers=headers))
     except Exception as ex:
@@ -54,4 +63,3 @@ class Channel:
       print('Channel Failed to update.')
       print(request_object.status_code)
       print(request_object.reason)
-

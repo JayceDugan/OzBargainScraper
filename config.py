@@ -1,3 +1,3 @@
 ### Discord
 oz_bargain_domain = "https://ozbargain.com.au/"
-discord_character_limit = 2000
+discord_character_limit = 1800
