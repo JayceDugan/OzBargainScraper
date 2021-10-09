@@ -40,7 +40,8 @@ class Channel:
     time_format = '%d %b %y at %I:%M%p'
     timestamp = datetime.now() + timedelta(hours=1)
     formatted_timestamp = timestamp.strftime(time_format)
-    next_update_message = '- Deals will be updated in 1 hour at approximately: ' + formatted_timestamp
+    # next_update_message = '- Deals will be updated in 1 hour at approximately: ' + formatted_timestamp
+    next_update_message = '- Deals will be updated in 1 hour.'
 
     self.message({ "content": next_update_message })
 
