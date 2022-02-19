@@ -1,13 +1,11 @@
-FROM python:3.9.1
+FROM public.ecr.aws/lambda/python:3.8
 
-RUN pip install --upgrade pip
+# Install the function's dependencies using file requirements.txt
+# from your project folder.
+COPY requirements.txt  .
+RUN  pip3 install -r requirements.txt --target "${LAMBDA_TASK_ROOT}"
 
-COPY ./requirements.txt /requirements.txt
+COPY . ${LAMBDA_TASK_ROOT}
 
-RUN pip install -r requirements.txt
-
-WORKDIR /usr/src
-
-COPY . .
-
-CMD ["python", "./oz_bargain_scraper.py"]
+# Set the CMD to your handler (could also be done as a parameter override outside of the Dockerfile)
+CMD [ "app.handler" ]

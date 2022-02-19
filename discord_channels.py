@@ -1,6 +1,8 @@
 import json
 import time
 import discord_channel
+import boto3
+import config
 
 class discordChannels:
   def __init__(self):
@@ -16,8 +18,18 @@ class discordChannels:
     print('Discord Channels data successfully loaded.')
 
   def load_data(self):
-    with open('lib/discord_channels.json') as discord_channels_json:
-      return json.load(discord_channels_json)
+    session = boto3.Session(
+      region_name=config.AWS_REGION,
+      aws_access_key_id=config.AWS_ACCESS_KEY_ID,
+      aws_secret_access_key=config.AWS_SECRET_ACCESS_KEY,
+      aws_session_token=config.AWS_SESSION_TOKEN
+    )
+
+    dynamo = session.resource('dynamodb')
+    dynamo_discord_webhooks = dynamo.Table('discord_webhooks')
+    scan = dynamo_discord_webhooks.scan()
+
+    return scan['Items']
 
   def add_channel(self, channel):
     self.channels.append( discord_channel.Channel( channel ) )

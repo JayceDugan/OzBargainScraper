@@ -9,9 +9,9 @@ def chunker(seq, size):
 
 class Channel:
   def __init__(self, channel):
-    self.name = channel['name'],
-    self.oz_bargain_url = channel['oz-bargain-url']
-    self.webhook_url = channel['discord-webhook-url']
+    self.name = channel['discord_channel_name'],
+    self.oz_bargain_url = channel['oz_bargain_url']
+    self.webhook_url = channel['webhook_url']
     self.scraper = scraper.Scraper(self.oz_bargain_url)
 
   def scrape(self):
