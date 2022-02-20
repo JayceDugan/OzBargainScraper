@@ -2,7 +2,6 @@ import pyshorteners
 import oz_teaser
 import config
 
-
 class Deals:
   def __init__(self, deals):
     self.deals = deals
